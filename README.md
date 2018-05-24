@@ -3,7 +3,7 @@ CarLocator
 ![](https://github.com/kevinguitar/CarLocator/blob/master/icon_launcher-web.png)
 > An App that can help you remember the parking location
 ### Using
-* Using Kotlin & Architecture Component
+* Kotlin & Architecture Component
 * Google Maps Api
 * Deep Link with Map scheme
 
