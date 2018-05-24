@@ -1,6 +1,6 @@
 CarLocator
 ===
-![](https://i.imgur.com/2U3MFwT.png =200x)
+![](https://github.com/kevinguitar/CarLocator/blob/master/icon_launcher-web.png)
 > An App that can help you remember the parking location
 ### Using
 * Using Kotlin & Architecture Component
@@ -8,4 +8,4 @@ CarLocator
 * Deep Link with Map scheme
 
 ### Sceenshot
-![](https://i.imgur.com/4zEAzfI.png =400x)
+![](https://github.com/kevinguitar/CarLocator/blob/master/Screenshot_20180524-151837.png)
