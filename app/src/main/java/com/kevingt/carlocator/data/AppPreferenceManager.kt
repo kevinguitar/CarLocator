@@ -14,10 +14,12 @@ class AppPreferenceManager private constructor(context: Context) : PreferenceMan
         const val KEY_TIME: String = "TIME"
 
         private var instance: AppPreferenceManager? = null
-        fun getInstance(context: Context): AppPreferenceManager {
-            if (instance == null) instance = AppPreferenceManager(context)
-            return instance!!
-        }
+
+        fun getInstance(context: Context): AppPreferenceManager =
+                instance ?: synchronized(this) {
+                    instance ?: AppPreferenceManager(context)
+                            .also { instance = it }
+                }
     }
 
     init {

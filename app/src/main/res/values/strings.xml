@@ -6,6 +6,7 @@
     <string name="main_click_hint">點擊右下方按鈕即可紀錄停車位置</string>
     <string name="main_time_text">停車時間：%s</string>
     <string name="main_need_location_permission">請先同意定位權限</string>
+    <string name="main_cannot_get_location">系統無法取得你的定位</string>
     <string name="main_no_matched_address">此地點無法轉換為地址</string>
     <string name="main_map_marker_name">停車位置</string>
 </resources>

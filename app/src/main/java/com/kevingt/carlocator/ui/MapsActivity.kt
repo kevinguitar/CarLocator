@@ -11,7 +11,6 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import com.crashlytics.android.Crashlytics
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -74,9 +73,13 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback, View.OnClickListen
                         mMap?.isMyLocationEnabled = true
                         fusedLocationClient.lastLocation
                                 .addOnSuccessListener { location: Location? ->
-                                    updateLocation(location?.latitude, location?.longitude)
+                                    if (location != null) {
+                                        updateLocation(location.latitude, location.longitude)
+                                    } else {
+                                        Toast.makeText(this, R.string.main_cannot_get_location, Toast.LENGTH_SHORT).show()
+                                    }
                                 }
-                                //TODO: add error listener
+                        //TODO: add error listener
                     } else {
                         Toast.makeText(this, R.string.main_need_location_permission, Toast.LENGTH_SHORT).show()
                     }
